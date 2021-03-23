@@ -28,13 +28,53 @@ body {
 	overscroll-behavior: none;
 }
 
-#title {
+#header {
 	flex-shrink: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
 	padding: 8px 12px;
+	border-bottom: 1px solid #eee;
+}
+
+#title {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	border-bottom: 1px solid #eee;
+}
+
+#id-form {
+	display: flex;
+	align-items: stretch;
+	margin-left: 12px;
+}
+
+#id-input {
+	flex-grow: 1;
+	padding: 0 12px;
+	font-size: 16px;
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+#id-input::placeholder {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+#id-submit {
+	flex-shrink: 0;
+	margin-left: 8px;
+	padding: 0 12px;
+	font-weight: 900;
+	color: white;
+	background: #007aff;
+	border-radius: 8px;
+	transition: color 0.3s, background 0.3s;
+}
+
+#id-submit:disabled {
+	color: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.1);
 }
 
 #messages {

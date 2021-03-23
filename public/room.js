@@ -1,6 +1,10 @@
 const title = document.getElementById('title')
-const messages = document.getElementById('messages')
 
+const idForm = document.getElementById('id-form')
+const idInput = document.getElementById('id-input')
+const idSubmit = document.getElementById('id-submit')
+
+const messages = document.getElementById('messages')
 const messageForm = document.getElementById('message-form')
 const messageInput = document.getElementById('message-input')
 const messageSubmit = document.getElementById('message-submit')
@@ -54,6 +58,18 @@ collection.orderBy('created').onSnapshot(
 )
 
 title.innerText = room
+
+idInput.addEventListener('input', () => {
+	idSubmit.disabled = !idInput.value
+})
+
+idForm.addEventListener('submit', event => {
+	event.preventDefault()
+
+	if (idSubmit.disabled) return
+	window.location.href = `/${idInput.value}`
+})
+
 messageInput.focus()
 
 const onMessageChange = () => {
