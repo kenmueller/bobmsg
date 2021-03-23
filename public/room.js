@@ -30,7 +30,7 @@ const addMessage = ({ body, created }) => {
 
 	const messageTime = document.createElement('p')
 	messageTime.className = 'message-time'
-	messageTime.innerText = formatDate(created.toDate())
+	messageTime.innerText = formatDate(created ? created.toDate() : new Date())
 
 	const messageBody = document.createElement('p')
 	messageBody.className = 'message-body'
