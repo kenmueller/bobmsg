@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/room.css" />
+		<title>bobmsg</title>
+	</head>
+	<body>
+		<h1 id="title"></h1>
+		<div id="messages"></div>
+		<form id="message-form">
+			<input id="message-input" placeholder="Write anything..." />
+			<button id="message-submit" disabled>Send</button>
+		</form>
+		<script src="/__/firebase/8.3.1/firebase-app.js"></script>
+		<script src="/__/firebase/8.3.1/firebase-firestore.js"></script>
+		<script src="/__/firebase/init.js"></script>
+		<script src="/room.js"></script>
+	</body>
+</html>
