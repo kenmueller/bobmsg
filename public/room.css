@@ -98,6 +98,7 @@ body {
 	max-width: max-content;
 	margin-top: 4px;
 	padding: 6px 10px;
+	overflow: hidden;
 	word-wrap: break-word;
 	background: #eee;
 	border-radius: 15px;
